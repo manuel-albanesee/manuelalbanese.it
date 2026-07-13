@@ -28,6 +28,8 @@ export const buttonVariants = cva(
 type ButtonProps = React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     href?: string;
+    target?: string;
+    rel?: string;
   };
 
 export function Button({
@@ -35,13 +37,15 @@ export function Button({
   variant,
   size,
   href,
+  target,
+  rel,
   ...props
 }: ButtonProps) {
   const classes = cn(buttonVariants({ variant, size }), className);
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} className={classes} target={target} rel={rel}>
         {props.children}
       </Link>
     );
