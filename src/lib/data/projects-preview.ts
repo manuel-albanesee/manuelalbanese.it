@@ -18,8 +18,7 @@ export const projectsPreview: ProjectPreview[] = [
       "Pipeline deterministica che trasforma un'idea in una sintesi con citazioni verificabili, interrogando arXiv, PubMed, Semantic Scholar e OpenAlex.",
     proof: "Ogni run è riproducibile e completamente tracciato — codice pubblico, verificabile riga per riga",
     stack: ["Python"],
-    href: "https://github.com/manuel-albanesee/researcher",
-    external: true,
+    href: "/progetti/researcher",
   },
   {
     slug: "eml-classificator",
@@ -29,7 +28,7 @@ export const projectsPreview: ProjectPreview[] = [
       "Classificatore email deterministico per un flusso di smistamento enterprise: stessa email in ingresso, stesso esito in uscita, sempre.",
     proof: "Logica di classificazione tracciabile e auditabile, non un modello black-box",
     stack: ["Python"],
-    href: "/progetti",
+    href: "/progetti/eml-classificator",
   },
   {
     slug: "menudigitale",
@@ -39,6 +38,6 @@ export const projectsPreview: ProjectPreview[] = [
       "Piattaforma di menu digitali per ristoranti: CMS headless, hardening di sicurezza (log di audit, proxy trust policy) e suite di test completa.",
     proof: "Copertura Vitest + Playwright end-to-end, non solo happy path",
     stack: ["Next.js", "Sanity"],
-    href: "/progetti",
+    href: "/progetti/menudigitale",
   },
 ];
