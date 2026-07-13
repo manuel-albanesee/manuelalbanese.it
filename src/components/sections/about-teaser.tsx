@@ -17,9 +17,9 @@ export function AboutTeaser() {
           </h2>
           <p className="mt-2 max-w-xl text-ink-2">
             Sviluppatore full-stack con focus sui sistemi AI. Costruisco
-            pipeline RAG, agenti LLM e soluzioni di inferenza locale, e
-            applicazioni web complete dal backend al frontend — con la stessa
-            disciplina di tracciabilità in entrambi i mondi.
+            soluzioni AI di cui ti puoi fidare e applicazioni web complete,
+            dal motore all&apos;interfaccia — con la stessa cura e trasparenza
+            in entrambi i mondi.
           </p>
           <Link
             href="/chi-sono"

@@ -17,21 +17,21 @@ export const processSteps: ProcessStep[] = [
     number: "02",
     title: "Fattibilità",
     description:
-      "Se il caso lo richiede, un audit o un proof-of-concept a costo fisso prima di qualsiasi impegno più ampio — così si valida l'approccio con dati veri.",
-    deliverable: "Report tecnico o PoC funzionante, con esito onesto",
+      "Se il caso lo richiede, una verifica di fattibilità o un prototipo a costo fisso prima di qualsiasi impegno più ampio — così si valida l'approccio con dati veri.",
+    deliverable: "Report di fattibilità o prototipo funzionante, con esito onesto",
   },
   {
     number: "03",
     title: "Costruzione",
     description:
-      "Sviluppo iterativo con checkpoint frequenti. Ogni scelta architetturale è tracciata e motivata, non improvvisata in corsa.",
+      "Sviluppo per passi con punti di verifica frequenti. Ogni scelta importante è documentata e motivata, non improvvisata in corsa.",
     deliverable: "Incrementi verificabili, non un'unica consegna a sorpresa",
   },
   {
     number: "04",
     title: "Consegna",
     description:
-      "Codice, documentazione e — dove pertinente — il trace di audit che dimostra come il sistema è stato validato. Il progetto resta comprensibile anche senza di me.",
-    deliverable: "Software completo + documentazione + audit trail",
+      "Codice, documentazione e — dove serve — le prove che mostrano come il sistema è stato controllato. Il progetto resta comprensibile anche senza di me.",
+    deliverable: "Software completo + documentazione + prove di verifica",
   },
 ];
