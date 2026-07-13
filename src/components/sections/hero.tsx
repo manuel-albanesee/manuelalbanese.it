@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 
 const trace = [
-  { label: "requirements", detail: "ISO/IEC/IEEE 29148, traceable" },
-  { label: "design", detail: "IEEE 1016, every choice anchored" },
-  { label: "ai context", detail: "deterministic, fully auditable" },
-  { label: "research", detail: "citation-backed, reproducible" },
+  { label: "requisiti", detail: "chiari e concordati prima di iniziare" },
+  { label: "progetto", detail: "ogni scelta documentata e motivata" },
+  { label: "sistema ai", detail: "risultati ripetibili e verificabili" },
+  { label: "ricerca", detail: "ogni risposta collegata a fonti reali" },
 ];
 
 export function Hero() {
@@ -19,9 +19,9 @@ export function Hero() {
             Software che consegna risultati.
           </h1>
           <p className="mt-6 max-w-lg text-lg text-ink-2">
-            Progetto sistemi AI deterministici e verificabili — RAG, agenti
-            LLM, inferenza locale — e li consegno come software completo, dal
-            backend all&apos;interfaccia.
+            Progetto sistemi AI affidabili e verificabili — di cui puoi
+            controllare ogni risposta — e li consegno come software completo,
+            dal motore fino all&apos;interfaccia.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button href="/contatti" size="lg">
@@ -37,7 +37,7 @@ export function Hero() {
           aria-hidden="true"
           className="rounded-2xl border border-border bg-mono-bg p-6 font-mono text-sm"
         >
-          <p className="text-ink-2">$ manuel --trace</p>
+          <p className="text-ink-2">$ manuel --come-lavoro</p>
           <ul className="mt-4 space-y-2">
             {trace.map((line) => (
               <li key={line.label} className="flex gap-3">
@@ -49,7 +49,7 @@ export function Hero() {
             ))}
           </ul>
           <p className="mt-4 text-ink-2">
-            $ every system ships with its own audit trail{" "}
+            $ ogni progetto arriva con la sua storia verificabile{" "}
             <span className="text-accent">█</span>
           </p>
         </div>

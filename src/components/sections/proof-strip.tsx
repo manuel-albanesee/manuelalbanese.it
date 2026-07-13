@@ -2,13 +2,12 @@ import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
 
 const items = [
-  "ISO/IEC/IEEE 29148",
-  "IEEE 1016",
   "GDPR-first",
+  "Standard ISO/IEEE",
+  "AI verificabile",
+  "AI in locale",
   "TypeScript",
   "Python",
-  "RAG",
-  "Ollama",
   "Next.js",
 ];
 

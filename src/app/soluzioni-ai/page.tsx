@@ -24,9 +24,9 @@ const solutionPoints = [
       "Se la fonte non c'è, il sistema dice \"non lo so\" — non inventa. Ogni risposta è tracciabile fino al documento di origine.",
   },
   {
-    title: "Pipeline deterministiche dove serve",
+    title: "Risultati ripetibili dove serve",
     detail:
-      "Stesso input, stesso output: per classificazione, estrazione e flussi decisionali, il non-determinismo è un difetto, non una feature.",
+      "Stesso dato in ingresso, stesso risultato in uscita: dove servono decisioni affidabili — smistare, estrarre, decidere — il sistema non deve mai improvvisare.",
   },
   {
     title: "Inferenza locale con Ollama",
@@ -46,7 +46,7 @@ const techDetails = [
   },
   {
     q: "Come verifico il mio lavoro",
-    a: "Ogni sistema ha un audit trail: run riproducibili, decisioni tracciate, test su casi reali prima della consegna — non solo sull'happy path.",
+    a: "Ogni sistema tiene traccia di cosa fa: risultati ripetibili, decisioni documentate e prove su casi reali prima della consegna, non solo negli scenari più semplici.",
   },
 ];
 
@@ -152,11 +152,11 @@ export default function SoluzioniAiPage() {
         <Container className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="font-display text-2xl font-semibold sm:text-3xl">
-              Prova: eml_classificator e researcher
+              Prova: researcher
             </h2>
             <p className="mt-2 max-w-md text-ink-2">
-              Un classificatore email deterministico in produzione e una
-              pipeline di ricerca open source — codice vero, non solo
+              Una pipeline di ricerca open source che collega ogni risposta a
+              fonti reali e controllabili — codice pubblico, non solo
               promesse.
             </p>
           </div>

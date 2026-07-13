@@ -16,9 +16,9 @@ export function ServiceCards() {
               Soluzioni AI
             </h2>
             <p className="mt-4 max-w-md text-ink-2">
-              Pipeline RAG, agenti LLM e inferenza locale progettati per
-              essere deterministici, verificabili e conformi agli standard —
-              non un black-box che spera di avere ragione.
+              Sistemi AI progettati per essere affidabili e verificabili:
+              puoi sempre controllare da dove arriva ogni risposta, invece di
+              fidarti di una scatola nera che spera di avere ragione.
             </p>
           </div>
           <span className="mt-8 inline-flex items-center gap-2 font-medium text-accent">
@@ -37,8 +37,8 @@ export function ServiceCards() {
               Sviluppo Web
             </h2>
             <p className="mt-4 text-ink-2">
-              Siti e web-app costruiti da zero con TypeScript, React e
-              Next.js — stessa disciplina di consegna dei progetti AI.
+              Siti e web-app costruiti da zero — veloci, curati e affidabili,
+              con la stessa disciplina di consegna dei progetti AI.
             </p>
           </div>
           <span className="mt-8 inline-flex items-center gap-2 font-medium text-accent">

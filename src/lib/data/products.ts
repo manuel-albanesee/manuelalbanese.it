@@ -12,9 +12,9 @@ export const products: Product[] = [
   {
     slug: "contextflow",
     name: "ContextFlow",
-    tagline: "Orchestratore di contesto deterministico per assistenti AI",
+    tagline: "Dà agli assistenti AI di programmazione il contesto giusto, in modo prevedibile",
     description:
-      "Proxy stateless tra IDE (Claude Code, Copilot) e LLM che compone system prompt effimeri a partire da una memoria distillata gerarchicamente (piramide L0→L3) e regole di contesto per modulo. CLI, dashboard di audit e packaging npm già costruiti — in preparazione il lancio in private beta.",
+      "Si mette tra il tuo assistente AI di programmazione (Claude Code, Copilot) e il modello, e gli passa solo il contesto rilevante per ciò su cui stai lavorando — così le risposte restano pertinenti e coerenti invece di andare a caso. Riga di comando, cruscotto di controllo e pacchetto npm già pronti; lancio in private beta in preparazione.",
     stack: ["TypeScript", "Node"],
     status: "beta",
     href: "https://github.com/manuel-albanesee/contextflow-showcase",
@@ -22,9 +22,9 @@ export const products: Product[] = [
   {
     slug: "specification-documents-ai",
     name: "Specification Documents AI",
-    tagline: "Agenti AI che intervistano e producono specifiche formali",
+    tagline: "Agenti AI che intervistano te e scrivono le specifiche software al posto tuo",
     description:
-      "Agenti AI conducono interviste strutturate per produrre specifiche software formali: dai requisiti a un Functional Specification Document conforme ISO/IEC/IEEE 29148 con Requirements Traceability Matrix, dal design tecnico a una Software Design Description IEEE 1016 con tracciabilità completa.",
+      "Un'AI ti fa le domande giuste e trasforma le tue risposte in documenti di specifica completi e ordinati: dai requisiti al progetto tecnico, ogni scelta è documentata e collegata al motivo per cui è stata presa. Segue gli standard di settore (ISO/IEC/IEEE 29148, IEEE 1016) senza che tu debba conoscerli.",
     stack: ["Python", "Flask", "LLM"],
     status: "beta",
     href: "https://github.com/manuel-albanesee/specdocs-ai-showcase",
@@ -32,9 +32,9 @@ export const products: Product[] = [
   {
     slug: "socraticengine",
     name: "SocraticEngine",
-    tagline: "Editor di co-scrittura AI che mette alla prova le idee",
+    tagline: "Un editor di scrittura AI che mette alla prova le tue idee invece di assecondarle",
     description:
-      "Non completa il testo: lo mette in discussione. Dialettica socratica, lenti filosofiche e attrito intellettuale strutturato, con embedding zero-knowledge lato client. In sviluppo attivo.",
+      "Non completa le frasi al posto tuo: mette in discussione quello che scrivi. Ti fa domande, ti propone punti di vista diversi e ti spinge a rendere più solide le tue idee. I tuoi testi restano privati, elaborati sul tuo dispositivo. In sviluppo attivo.",
     stack: ["FastAPI", "React", "PostgreSQL"],
     status: "in-sviluppo",
     href: "https://github.com/manuel-albanesee/socraticengine-showcase",

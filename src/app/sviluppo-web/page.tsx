@@ -14,7 +14,7 @@ const pains = [
   "Preventivi opachi delle web agency, con voci che spuntano solo a lavoro iniziato",
   "Siti consegnati e poi abbandonati, senza nessuno che li mantenga",
   "Tempo perso in email ripetitive per chiarire cose che dovevano essere chiare dall'inizio",
-  "Nessun test: il sito funziona finché nessuno lo tocca",
+  "Consegnato senza controlli: funziona finché nessuno lo tocca, poi si rompe in silenzio",
 ];
 
 const solutionPoints = [
@@ -24,9 +24,9 @@ const solutionPoints = [
       "Sai cosa ricevi e quando, prima di iniziare — pacchetti \"a partire da\", non preventivi a sorpresa.",
   },
   {
-    title: "Test veri, non promesse",
+    title: "Controllato prima della consegna",
     detail:
-      "Suite Vitest + Playwright end-to-end: il sito è verificato prima che lo veda il primo cliente, non dopo il primo bug in produzione.",
+      "Controlli automatici verificano il sito prima che lo veda il primo cliente, così i problemi emergono prima del lancio, non dopo la prima segnalazione.",
   },
   {
     title: "Un progetto che resta comprensibile",
@@ -38,11 +38,11 @@ const solutionPoints = [
 const techDetails = [
   {
     q: "Stack tecnico",
-    a: "TypeScript, React e Next.js per il frontend, CMS headless dove serve contenuto gestibile in autonomia, hardening di sicurezza (audit log, policy di trust sui proxy) quando il progetto lo richiede.",
+    a: "TypeScript, React e Next.js per il sito, un pannello di gestione contenuti dove serve aggiornare in autonomia, e protezioni di sicurezza sui dati quando il progetto lo richiede.",
   },
   {
-    q: "Qualità e test",
-    a: "Suite di test Vitest per la logica e Playwright per i flussi end-to-end — la stessa disciplina che applico ai sistemi AI, portata sul web.",
+    q: "Qualità e controlli",
+    a: "Controlli automatici verificano sia la logica sia i percorsi che l'utente compie davvero sul sito — la stessa cura che metto nei sistemi AI, portata sul web.",
   },
   {
     q: "Cosa succede dopo la consegna",
@@ -155,8 +155,9 @@ export default function SviluppoWebPage() {
               Prova: menuDigitale
             </h2>
             <p className="mt-2 max-w-md text-ink-2">
-              Piattaforma di menu digitali per ristoranti, con CMS headless,
-              hardening di sicurezza e suite di test end-to-end completa.
+              Piattaforma di menu digitali per ristoranti: il locale aggiorna
+              il menu da solo, con la sicurezza dei dati a posto e ogni
+              aggiornamento controllato prima di andare online.
             </p>
           </div>
           <Button href="/progetti" variant="secondary">
