@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { processSteps } from "@/lib/data/process-steps";
+import { FaqJsonLd } from "@/components/faq-json-ld";
 
 export const metadata: Metadata = {
   title: "Come lavoro",
@@ -66,6 +67,7 @@ const faqs = [
 export default function ComeLavoroPage() {
   return (
     <main className="flex flex-1 flex-col">
+      <FaqJsonLd faqs={faqs} />
       <section className="pt-16 pb-12 sm:pt-24">
         <Container>
           <p className="font-mono text-xs text-ink-2">come lavoro</p>

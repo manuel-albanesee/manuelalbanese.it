@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { FaqJsonLd } from "@/components/faq-json-ld";
 
 export const metadata: Metadata = {
   title: "Sviluppo Web",
@@ -67,6 +68,7 @@ const faqs = [
 export default function SviluppoWebPage() {
   return (
     <main className="flex flex-1 flex-col">
+      <FaqJsonLd faqs={faqs} />
       <section className="pt-16 pb-12 sm:pt-24">
         <Container>
           <Badge>linea secondaria</Badge>
