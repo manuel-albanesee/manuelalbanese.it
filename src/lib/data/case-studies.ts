@@ -19,21 +19,21 @@ export const caseStudies: CaseStudy[] = [
     name: "researcher",
     category: "AI",
     year: "2025",
-    headline: "Da idea a sintesi con citazioni verificabili, in una pipeline riproducibile",
+    headline: "Da una domanda a una sintesi con fonti vere, non inventate",
     context:
-      "Pipeline open source personale per trasformare una domanda di ricerca in una sintesi affidabile, interrogando fonti accademiche invece di affidarsi alla sola memoria di un LLM.",
+      "Uno strumento open source che trasforma una domanda di ricerca in una sintesi affidabile, andando a leggere fonti accademiche reali invece di affidarsi alla memoria di un modello AI.",
     problem:
-      "Chiedere a un LLM generico una sintesi di letteratura scientifica produce risposte plausibili ma spesso non verificabili: citazioni inventate, fonti non controllabili, risultati diversi ad ogni run.",
+      "Chiesta a un'AI generica, una sintesi della letteratura scientifica suona convincente ma spesso non regge: cita studi che non esistono, fonti che non puoi controllare, e dà risposte diverse ogni volta.",
     solution:
-      "Una pipeline deterministica che interroga arXiv, PubMed, Semantic Scholar e OpenAlex, ancora ogni affermazione a una citazione reale e traccia l'intero processo di ricerca — nessun passaggio è una black-box.",
+      "Interroga banche dati scientifiche reali — arXiv, PubMed, Semantic Scholar, OpenAlex — e collega ogni affermazione alla fonte da cui viene. Niente passaggi nascosti: puoi risalire a ogni citazione.",
     results: [
-      "Ogni run è riproducibile: stesso input, stesso percorso di ricerca",
-      "Ogni affermazione nella sintesi è ancorata a una citazione verificabile",
-      "L'intero processo è tracciato — nessuna sintesi \"magica\" senza percorso ispezionabile",
+      "Ogni affermazione è collegata a una fonte reale che puoi aprire e controllare",
+      "Stessa domanda, stesso percorso di ricerca — risultati coerenti, non casuali",
+      "L'intero processo è tracciato: nessuna risposta \"magica\" di cui fidarsi alla cieca",
     ],
     stack: ["Python"],
     verification:
-      "Il codice è pubblico su GitHub: non c'è bisogno di crederci sulla parola, si può leggere la logica di retrieval e citazione riga per riga.",
+      "Il codice è pubblico su GitHub: non devi credermi sulla parola, chiunque può leggere come cerca le fonti e come costruisce le citazioni.",
     externalHref: "https://github.com/manuel-albanesee/researcher",
   },
   {
@@ -41,21 +41,21 @@ export const caseStudies: CaseStudy[] = [
     name: "ContextFlow",
     category: "AI",
     year: "2025",
-    headline: "Un orchestratore di contesto deterministico per assistenti AI, non un prompt magico",
+    headline: "Il tuo assistente AI di programmazione, con il contesto giusto ogni volta",
     context:
-      "Prodotto in preparazione per il lancio in private beta: un proxy stateless che si inserisce tra IDE (Claude Code, Copilot) e LLM per gestire il contesto in modo riproducibile invece che affidarsi a system prompt statici o a memoria ad hoc.",
+      "Prodotto in preparazione per il lancio in private beta: si inserisce tra l'assistente AI di programmazione (Claude Code, Copilot) e il modello per decidere cosa il modello vede a ogni richiesta.",
     problem:
-      "Gli assistenti AI perdono coerenza di contesto tra sessioni e moduli: il prompt cresce senza controllo, la memoria non è tracciabile e ogni sessione riparte da zero o si affida a un contesto non verificabile.",
+      "Su sessioni lunghe o progetti complessi, gli assistenti AI perdono il filo: rispondono in modo incoerente o dimenticano decisioni prese poco prima, perché il contesto che ricevono è disordinato o eccessivo.",
     solution:
-      "Il proxy compone system prompt effimeri a partire da una memoria distillata gerarchicamente (piramide L0→L3) e da regole di contesto specifiche per modulo — CLI, dashboard di audit e packaging npm già costruiti.",
+      "Distilla la cronologia di lavoro in una memoria organizzata su più livelli e passa al modello solo ciò che serve per il compito specifico — riga di comando, cruscotto di controllo e pacchetto npm già pronti.",
     results: [
-      "Contesto iniettato in ogni richiesta LLM è ricostruibile e auditabile, non un prompt opaco",
-      "Memoria distillata su più livelli (L0→L3) invece di un unico blob non strutturato",
-      "CLI, dashboard di audit e packaging npm pronti in vista della private beta",
+      "Il modello riceve solo il contesto pertinente al compito, non l'intera cronologia",
+      "Le decisioni prese in sessioni precedenti restano tracciate e riutilizzabili",
+      "Riga di comando, cruscotto di controllo e pacchetto npm pronti in vista della private beta",
     ],
     stack: ["TypeScript", "Node"],
     verification:
-      "Panoramica pubblica e architettura discutibili su richiesta: codice del prodotto commerciale privato, ma il design è verificabile a voce o via demo.",
+      "Panoramica pubblica e architettura discutibili su richiesta: il codice del prodotto resta privato, ma il funzionamento è verificabile a voce o via demo.",
     externalHref: "https://github.com/manuel-albanesee/contextflow-showcase",
   },
   {
@@ -63,21 +63,22 @@ export const caseStudies: CaseStudy[] = [
     name: "menuDigitale",
     category: "Web",
     year: "2024",
-    headline: "Una piattaforma di menu digitali consegnata con test veri, non solo promesse",
+    headline:
+      "Una piattaforma di menu digitali che il ristoratore aggiorna da solo, senza sorprese",
     context:
-      "Piattaforma di menu digitali per ristoranti: gestione contenuti in autonomia da parte del cliente, senza dover passare da sviluppo per ogni modifica al menu.",
+      "Piattaforma di menu digitali per ristoranti: il locale aggiorna piatti, prezzi e allergeni in autonomia, senza dover chiamare uno sviluppatore per ogni modifica.",
     problem:
-      "I siti/web-app per la ristorazione vengono spesso consegnati senza test, con il rischio che una modifica al menu rompa qualcosa in produzione senza che nessuno se ne accorga.",
+      "Molti siti per la ristorazione vengono consegnati e poi si rompono al primo cambiamento: aggiorni un prezzo e qualcos'altro smette di funzionare, magari in pieno servizio, senza che nessuno se ne accorga.",
     solution:
-      "CMS headless per la gestione autonoma dei contenuti, hardening di sicurezza (log di audit, policy di trust sui proxy) e una suite di test end-to-end completa prima di ogni rilascio.",
+      "Un pannello semplice per gestire il menu in autonomia, protezioni di sicurezza sui dati e controlli automatici che verificano il sito prima di ogni aggiornamento — così un ritocco al menu non manda in tilt il resto.",
     results: [
-      "Copertura di test end-to-end con Vitest e Playwright, non solo unit test isolati",
-      "Gestione contenuti autonoma per il cliente, senza dipendenza da interventi di sviluppo",
-      "Hardening di sicurezza applicato prima della messa in produzione, non dopo un incidente",
+      "Il ristoratore aggiorna il menu da solo, senza dipendere da interventi tecnici",
+      "Ogni aggiornamento è controllato in automatico prima di andare online: niente sorprese in pieno servizio",
+      "Sicurezza dei dati sistemata prima del lancio, non dopo un problema",
     ],
     stack: ["Next.js", "Sanity"],
     verification:
-      "Ogni rilascio passa dalla suite Vitest + Playwright prima di raggiungere la produzione.",
+      "Prima di ogni pubblicazione, controlli automatici ripercorrono i passaggi chiave del sito — dal caricamento del menu all'ordine — così un problema si vede prima del cliente, non dopo.",
     externalHref: "https://github.com/manuel-albanesee/menudigitale-showcase",
   },
 ];

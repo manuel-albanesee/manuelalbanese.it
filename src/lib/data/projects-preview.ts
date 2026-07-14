@@ -15,8 +15,9 @@ export const projectsPreview: ProjectPreview[] = [
     name: "researcher",
     category: "AI",
     summary:
-      "Pipeline deterministica che trasforma un'idea in una sintesi con citazioni verificabili, interrogando arXiv, PubMed, Semantic Scholar e OpenAlex.",
-    proof: "Ogni run è riproducibile e completamente tracciato — codice pubblico, verificabile riga per riga",
+      "Trasforma una domanda di ricerca in una sintesi affidabile, collegando ogni affermazione a fonti accademiche reali — arXiv, PubMed, Semantic Scholar, OpenAlex.",
+    proof:
+      "Codice pubblico su GitHub: ogni citazione è reale e verificabile, niente fonti inventate",
     stack: ["Python"],
     href: "/progetti/researcher",
   },
@@ -25,8 +26,8 @@ export const projectsPreview: ProjectPreview[] = [
     name: "ContextFlow",
     category: "AI",
     summary:
-      "Orchestratore di contesto deterministico per assistenti AI: proxy stateless che compone system prompt effimeri da una memoria distillata gerarchicamente (piramide L0→L3).",
-    proof: "CLI, dashboard di audit e packaging npm già costruiti — codice ispezionabile, non un prompt magico",
+      "Si inserisce tra il tuo assistente AI di programmazione e il modello, passandogli solo il contesto giusto per il compito su cui stai lavorando.",
+    proof: "Riga di comando, cruscotto di controllo e pacchetto npm già pronti, in vista della private beta",
     stack: ["TypeScript", "Node"],
     href: "/progetti/contextflow",
   },
@@ -35,8 +36,9 @@ export const projectsPreview: ProjectPreview[] = [
     name: "menuDigitale",
     category: "Web",
     summary:
-      "Piattaforma di menu digitali per ristoranti: CMS headless, hardening di sicurezza (log di audit, proxy trust policy) e suite di test completa.",
-    proof: "Copertura Vitest + Playwright end-to-end, non solo happy path",
+      "Piattaforma di menu digitali per ristoranti: il locale aggiorna piatti e prezzi in autonomia, con la sicurezza dei dati sistemata dall'inizio.",
+    proof:
+      "Controlli automatici verificano il sito prima di ogni aggiornamento — niente sorprese in servizio",
     stack: ["Next.js", "Sanity"],
     href: "/progetti/menudigitale",
   },
