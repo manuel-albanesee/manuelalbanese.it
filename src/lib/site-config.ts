@@ -4,10 +4,8 @@ export const siteConfig = {
   tagline: "AI di cui ti puoi fidare. Software che consegna risultati.",
   github: "https://github.com/manuel-albanesee",
   linkedin: "https://www.linkedin.com/in/manuel-albanese",
-  // Handle Cal.com (es. "manuelalbanese/30min"). Finché non è impostato,
-  // la pagina /contatti mostra LinkedIn come canale primario di booking
-  // invece di un embed rotto.
-  calComHandle: "",
+  email: "manuel.albanese.lavoro@gmail.com",
+  calendlyUrl: "https://calendly.com/manuel-albanese-lavoro/30min",
 };
 
 export type NavItem = {

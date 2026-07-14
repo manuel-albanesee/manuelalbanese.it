@@ -22,6 +22,16 @@ export const projectsPreview: ProjectPreview[] = [
     href: "/progetti/researcher",
   },
   {
+    slug: "contextflow",
+    name: "ContextFlow",
+    category: "AI",
+    summary:
+      "Si inserisce tra il tuo assistente AI di programmazione e il modello, passandogli solo il contesto giusto per il compito su cui stai lavorando.",
+    proof: "Riga di comando, cruscotto di controllo e pacchetto npm già pronti, in vista della private beta",
+    stack: ["TypeScript", "Node"],
+    href: "/progetti/contextflow",
+  },
+  {
     slug: "menudigitale",
     name: "menuDigitale",
     category: "Web",

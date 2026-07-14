@@ -152,11 +152,12 @@ export default function SoluzioniAiPage() {
         <Container className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="font-display text-2xl font-semibold sm:text-3xl">
-              Prova: researcher
+              Prova: ContextFlow e researcher
             </h2>
             <p className="mt-2 max-w-md text-ink-2">
-              Una pipeline di ricerca open source che collega ogni risposta a
-              fonti reali e controllabili — codice pubblico, non solo
+              Un assistente AI di programmazione che riceve solo il contesto
+              giusto e una pipeline di ricerca open source che collega ogni
+              risposta a fonti reali — codice vero, non solo
               promesse.
             </p>
           </div>

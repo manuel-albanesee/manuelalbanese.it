@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/container";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { FaqJsonLd } from "@/components/faq-json-ld";
 import { caseStudies } from "@/lib/data/case-studies";
 
 type Props = {
@@ -39,6 +40,7 @@ export default async function CaseStudyPage({ params }: Props) {
 
   return (
     <main className="flex flex-1 flex-col">
+      <FaqJsonLd faqs={project.faqs} />
       <section className="pt-16 pb-12 sm:pt-24">
         <Container>
           <div className="flex items-center gap-3">
@@ -72,6 +74,27 @@ export default async function CaseStudyPage({ params }: Props) {
             La soluzione
           </h2>
           <p className="mt-4 max-w-2xl text-ink-2">{project.solution}</p>
+        </Container>
+      </section>
+
+      <section className="border-t border-border py-16 sm:py-20">
+        <Container>
+          <h2 className="font-display text-2xl font-semibold sm:text-3xl">
+            Come funziona
+          </h2>
+          <ol className="mt-6 grid gap-4 sm:grid-cols-2">
+            {project.howItWorks.map((step, index) => (
+              <li
+                key={step}
+                className="flex gap-4 rounded-2xl border border-border bg-surface p-5"
+              >
+                <span className="font-mono text-sm text-ink-2">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="text-ink-2">{step}</span>
+              </li>
+            ))}
+          </ol>
         </Container>
       </section>
 
@@ -119,6 +142,27 @@ export default async function CaseStudyPage({ params }: Props) {
             </summary>
             <p className="mt-3 text-sm text-ink-2">{project.verification}</p>
           </details>
+        </Container>
+      </section>
+
+      <section className="border-t border-border py-16 sm:py-20">
+        <Container>
+          <h2 className="font-display text-2xl font-semibold sm:text-3xl">
+            Domande frequenti
+          </h2>
+          <div className="mt-6 space-y-3">
+            {project.faqs.map((faq) => (
+              <details
+                key={faq.q}
+                className="group rounded-2xl border border-border bg-surface p-5"
+              >
+                <summary className="cursor-pointer list-none font-display font-semibold marker:content-none">
+                  {faq.q}
+                </summary>
+                <p className="mt-3 text-sm text-ink-2">{faq.a}</p>
+              </details>
+            ))}
+          </div>
         </Container>
       </section>
 
