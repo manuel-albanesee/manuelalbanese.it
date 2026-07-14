@@ -7,8 +7,8 @@ export type CaseStudy = {
   context: string;
   problem: string;
   solution: string;
-  results: string[];
-  howItWorks: string[];
+  results: string;
+  howItWorks: string;
   faqs: { q: string; a: string }[];
   stack: string[];
   verification: string;
@@ -28,17 +28,10 @@ export const caseStudies: CaseStudy[] = [
       "Chiesta a un'AI generica, una sintesi della letteratura scientifica suona convincente ma spesso non regge: cita studi che non esistono, fonti che non puoi controllare, e dà risposte diverse ogni volta. In un contesto di ricerca o decisionale, questo non è un dettaglio: è la differenza tra fidarsi e dover ricontrollare tutto a mano.",
     solution:
       "Interroga banche dati scientifiche reali — arXiv, PubMed, Semantic Scholar, OpenAlex — e collega ogni affermazione alla fonte da cui viene. Niente passaggi nascosti: puoi risalire a ogni citazione, e la stessa domanda ripetuta segue lo stesso percorso di ricerca invece di produrre un risultato diverso ogni volta.",
-    results: [
-      "Ogni affermazione è collegata a una fonte reale che puoi aprire e controllare",
-      "Stessa domanda, stesso percorso di ricerca — risultati coerenti, non casuali",
-      "L'intero processo è tracciato: nessuna risposta \"magica\" di cui fidarsi alla cieca",
-    ],
-    howItWorks: [
-      "Formuli una domanda di ricerca in linguaggio naturale",
-      "La pipeline interroga arXiv, PubMed, Semantic Scholar e OpenAlex per fonti pertinenti",
-      "Ogni affermazione della sintesi finale viene ancorata alla fonte da cui proviene",
-      "L'intero percorso di ricerca resta tracciato in un log ispezionabile",
-    ],
+    results:
+      "Ogni affermazione è collegata a una fonte reale che puoi aprire e controllare, la stessa domanda ripetuta segue sempre lo stesso percorso di ricerca invece di dare un risultato diverso ogni volta, e l'intero processo resta tracciato: nessuna risposta \"magica\" di cui fidarsi alla cieca.",
+    howItWorks:
+      "Tutto parte da una domanda di ricerca che formuli in linguaggio naturale: la pipeline interroga arXiv, PubMed, Semantic Scholar e OpenAlex per trovare le fonti pertinenti, e ogni affermazione della sintesi finale viene ancorata al risultato da cui proviene. L'intero percorso di ricerca resta tracciato in un log che puoi ispezionare in ogni momento.",
     faqs: [
       {
         q: "Come evita di inventare le citazioni?",
@@ -66,17 +59,10 @@ export const caseStudies: CaseStudy[] = [
       "Su sessioni lunghe o progetti complessi, gli assistenti AI perdono il filo: rispondono in modo incoerente o dimenticano decisioni prese poco prima, perché il contesto che ricevono è disordinato o eccessivo. Il risultato è tempo perso a ripetere le stesse spiegazioni o a correggere risposte fuori bersaglio.",
     solution:
       "Distilla la cronologia di lavoro in una memoria organizzata su più livelli e passa al modello solo ciò che serve per il compito specifico, invece dell'intera cronologia grezza — riga di comando, cruscotto di controllo e pacchetto npm già pronti.",
-    results: [
-      "Il modello riceve solo il contesto pertinente al compito, non l'intera cronologia",
-      "Le decisioni prese in sessioni precedenti restano tracciate e riutilizzabili",
-      "Riga di comando, cruscotto di controllo e pacchetto npm pronti in vista della private beta",
-    ],
-    howItWorks: [
-      "Il proxy si inserisce tra il tuo assistente AI di programmazione (Claude Code, Copilot) e il modello",
-      "Distilla la cronologia di lavoro in una memoria organizzata su più livelli",
-      "A ogni richiesta compone un contesto specifico per il modulo su cui stai lavorando",
-      "CLI e dashboard di audit mostrano esattamente cosa è stato passato al modello e perché",
-    ],
+    results:
+      "Il modello riceve solo il contesto pertinente al compito su cui stai lavorando, non l'intera cronologia grezza; le decisioni prese in sessioni precedenti restano tracciate e riutilizzabili invece di andare perse; e riga di comando, cruscotto di controllo e pacchetto npm sono già pronti in vista della private beta.",
+    howItWorks:
+      "Il proxy si inserisce tra il tuo assistente AI di programmazione — Claude Code, Copilot — e il modello, e distilla la cronologia di lavoro in una memoria organizzata su più livelli. A ogni richiesta compone un contesto specifico per il modulo su cui stai lavorando, mentre CLI e dashboard di audit mostrano esattamente cosa è stato passato al modello e perché.",
     faqs: [
       {
         q: "Sostituisce l'assistente AI che uso già?",
@@ -104,17 +90,10 @@ export const caseStudies: CaseStudy[] = [
       "Scrivere una specifica software conforme agli standard di settore richiede tempo ed esperienza che in azienda spesso manca: il risultato è o nessuna specifica, o un documento incompleto che ogni sviluppatore interpreta a modo suo, con costi di rilavorazione a valle.",
     solution:
       "Un'AI fa le domande giuste al posto di un business analyst e trasforma le risposte in un Functional Specification Document conforme ISO/IEC/IEEE 29148 con Requirements Traceability Matrix, e in una Software Design Description IEEE 1016 con tracciabilità completa dal requisito alla scelta tecnica.",
-    results: [
-      "Ogni requisito è tracciato fino alla decisione di design che lo soddisfa, non solo elencato",
-      "Il documento segue standard di settore riconosciuti, senza che tu debba conoscerli",
-      "Da intervista a documento pronto in ore, non settimane di riunioni",
-    ],
-    howItWorks: [
-      "Rispondi a un'intervista strutturata guidata dall'AI sul progetto da specificare",
-      "Il sistema traduce le risposte in requisiti tracciabili, uno per uno",
-      "Genera il Functional Specification Document (ISO/IEC/IEEE 29148) con Requirements Traceability Matrix",
-      "Genera la Software Design Description (IEEE 1016) collegata agli stessi requisiti",
-    ],
+    results:
+      "Ogni requisito è tracciato fino alla decisione di design che lo soddisfa, non solo elencato in un documento statico; il risultato segue standard di settore riconosciuti senza che tu debba conoscerli; e si passa da un'intervista a un documento pronto in ore, non in settimane di riunioni.",
+    howItWorks:
+      "Rispondi a un'intervista strutturata guidata dall'AI sul progetto da specificare, e il sistema traduce le tue risposte in requisiti tracciabili uno per uno. Da lì genera il Functional Specification Document secondo ISO/IEC/IEEE 29148 con la Requirements Traceability Matrix, e la Software Design Description IEEE 1016 collegata agli stessi requisiti.",
     faqs: [
       {
         q: "Serve conoscere questi standard per usarlo?",
@@ -142,17 +121,10 @@ export const caseStudies: CaseStudy[] = [
       "Gli editor AI generici completano le frasi e assecondano quello che stai già scrivendo: comodo per la velocità, ma non aiuta a capire se un'argomentazione regge davvero, e rischia di appiattire il pensiero invece di metterlo alla prova.",
     solution:
       "Invece di completare il testo, il sistema lo mette in discussione: propone controargomentazioni, lenti filosofiche diverse e domande scomode nei punti dove il ragionamento è più debole. I testi restano privati grazie a un'architettura di embedding zero-knowledge lato client.",
-    results: [
-      "Ogni argomentazione debole riceve una controdomanda mirata, non un completamento compiacente",
-      "I testi non lasciano mai il dispositivo in chiaro: l'embedding è zero-knowledge lato client",
-      "Pensato per chi scrive per ragionare, non per chi vuole solo riempire una pagina",
-    ],
-    howItWorks: [
-      "Scrivi il tuo testo nell'editor come faresti in un qualsiasi word processor",
-      "Il sistema individua i passaggi argomentativi più deboli",
-      "Ricevi domande e controargomentazioni mirate su quei passaggi, non correzioni generiche",
-      "Rivedi il testo con attrito intellettuale reale, non con autocompletamento",
-    ],
+    results:
+      "Ogni argomentazione debole riceve una controdomanda mirata, non un completamento compiacente; i testi non lasciano mai il dispositivo in chiaro grazie a un'architettura di embedding zero-knowledge lato client; ed è pensato per chi scrive per ragionare, non per chi vuole solo riempire una pagina più in fretta.",
+    howItWorks:
+      "Scrivi il tuo testo nell'editor come faresti in un qualsiasi word processor, e il sistema individua i passaggi argomentativi più deboli. Da lì ricevi domande e controargomentazioni mirate proprio su quei passaggi, non correzioni generiche, così puoi rivedere il testo con attrito intellettuale reale invece che con autocompletamento.",
     faqs: [
       {
         q: "È un correttore di bozze o un generatore di testo?",
@@ -181,17 +153,10 @@ export const caseStudies: CaseStudy[] = [
       "Molti siti per la ristorazione vengono consegnati e poi si rompono al primo cambiamento: aggiorni un prezzo e qualcos'altro smette di funzionare, magari in pieno servizio, senza che nessuno se ne accorga fino al reclamo di un cliente.",
     solution:
       "Un pannello semplice per gestire il menu in autonomia, protezioni di sicurezza sui dati e controlli automatici che verificano il sito prima di ogni aggiornamento — così un ritocco al menu non manda in tilt il resto.",
-    results: [
-      "Il ristoratore aggiorna il menu da solo, senza dipendere da interventi tecnici",
-      "Ogni aggiornamento è controllato in automatico prima di andare online: niente sorprese in pieno servizio",
-      "Sicurezza dei dati sistemata prima del lancio, non dopo un problema",
-    ],
-    howItWorks: [
-      "Il ristoratore aggiorna piatti, prezzi e allergeni dal pannello, senza intervento tecnico",
-      "Ogni modifica passa da controlli automatici prima di andare online",
-      "I dati sensibili sono protetti da policy di sicurezza e log di audit",
-      "Il cliente finale vede sempre il menu aggiornato, mai una versione rotta",
-    ],
+    results:
+      "Il ristoratore aggiorna il menu da solo, senza dipendere da interventi tecnici a ogni modifica; ogni aggiornamento è controllato in automatico prima di andare online, quindi niente sorprese in pieno servizio; e la sicurezza dei dati è stata sistemata prima del lancio, non dopo un problema.",
+    howItWorks:
+      "Il ristoratore aggiorna piatti, prezzi e allergeni direttamente dal pannello, senza bisogno di un intervento tecnico, e ogni modifica passa da controlli automatici prima di andare online. I dati sensibili sono protetti da policy di sicurezza e log di audit, così il cliente finale vede sempre il menu aggiornato, mai una versione rotta.",
     faqs: [
       {
         q: "Serve competenza tecnica per aggiornare il menu?",

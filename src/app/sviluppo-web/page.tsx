@@ -10,12 +10,8 @@ export const metadata: Metadata = {
     "Siti e web-app costruiti da zero con TypeScript, React e Next.js — perimetro chiaro, tempi certi, test veri, nessuna sorpresa dopo la consegna.",
 };
 
-const pains = [
-  "Preventivi opachi delle web agency, con voci che spuntano solo a lavoro iniziato",
-  "Siti consegnati e poi abbandonati, senza nessuno che li mantenga",
-  "Tempo perso in email ripetitive per chiarire cose che dovevano essere chiare dall'inizio",
-  "Consegnato senza controlli: funziona finché nessuno lo tocca, poi si rompe in silenzio",
-];
+const painsIntro =
+  "I preventivi delle web agency restano opachi, con voci che spuntano solo a lavoro già iniziato. Il sito viene consegnato e poi abbandonato, senza nessuno che lo mantenga davvero. Si perde tempo in email ripetitive per chiarire cose che dovevano essere chiare fin dall'inizio. E troppo spesso il progetto arriva senza controlli: funziona finché nessuno lo tocca, poi si rompe in silenzio.";
 
 const solutionPoints = [
   {
@@ -93,16 +89,7 @@ export default function SviluppoWebPage() {
           <h2 className="font-display text-2xl font-semibold sm:text-3xl">
             Il problema
           </h2>
-          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
-            {pains.map((pain) => (
-              <li
-                key={pain}
-                className="rounded-2xl border border-border bg-surface p-5 text-ink-2"
-              >
-                {pain}
-              </li>
-            ))}
-          </ul>
+          <p className="mt-4 max-w-2xl text-lg text-ink-2">{painsIntro}</p>
         </Container>
       </section>
 

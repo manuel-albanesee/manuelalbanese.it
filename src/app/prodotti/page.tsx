@@ -16,11 +16,12 @@ export default function ProdottiPage() {
         <Container>
           <p className="font-mono text-xs text-ink-2">i miei prodotti</p>
           <h1 className="mt-2 max-w-2xl font-display text-4xl font-semibold tracking-tight sm:text-5xl">
-            Costruisco prodotti AI miei
+            La prova che so portare un prodotto dal design al lancio
           </h1>
           <p className="mt-4 max-w-xl text-lg text-ink-2">
-            La tua garanzia che so consegnare: non solo consulenza, ma
-            prodotti che porto io stesso dal design al codice al lancio.
+            Non solo consulenza: prodotti AI che costruisco, mantengo e porto
+            sul mercato io stesso — la stessa disciplina che porto sul tuo
+            progetto.
           </p>
         </Container>
       </section>

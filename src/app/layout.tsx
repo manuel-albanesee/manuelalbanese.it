@@ -70,6 +70,10 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
+      <link rel="preconnect" href="https://calendly.com" />
+      <link rel="preconnect" href="https://assets.calendly.com" />
+      <link rel="dns-prefetch" href="https://calendly.com" />
+      <link rel="dns-prefetch" href="https://assets.calendly.com" />
       <body className="min-h-full flex flex-col bg-bg text-ink">
         <script
           type="application/ld+json"

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { EmailIcon, GitHubIcon, LinkedInIcon } from "@/components/icons";
+import { CalendlyEmbed } from "@/components/calendly-embed";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -12,31 +13,27 @@ export const metadata: Metadata = {
 export default function ContattiPage() {
   return (
     <main className="flex flex-1 flex-col">
-      <section className="pt-16 pb-12 sm:pt-24">
+      <section className="pt-10 pb-6 sm:pt-14">
         <Container>
           <p className="font-mono text-xs text-ink-2">contatti</p>
-          <h1 className="mt-2 max-w-2xl font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h1 className="mt-2 max-w-2xl font-display text-3xl font-semibold tracking-tight sm:text-4xl">
             Parliamo del tuo caso
           </h1>
-          <p className="mt-4 max-w-xl text-lg text-ink-2">
+          <p className="mt-3 max-w-xl text-base text-ink-2 sm:text-lg">
             30 minuti, nessun impegno, risposta onesta — anche se la
             risposta è &quot;non fa per te&quot;.
           </p>
         </Container>
       </section>
 
-      <section className="py-12">
+      <section className="pb-12">
         <Container className="grid gap-6 lg:grid-cols-3">
           <div className="flex flex-col gap-3 lg:col-span-2">
             <p className="font-mono text-xs text-ink-2">01 · canale primario</p>
-            <div className="overflow-hidden rounded-2xl border border-border">
-              <iframe
-                src={siteConfig.calendlyUrl}
-                title="Prenota una call con Manuel Albanese"
-                loading="lazy"
-                className="h-[720px] w-full"
-              />
-            </div>
+            <CalendlyEmbed
+              src={siteConfig.calendlyUrl}
+              title="Prenota una call con Manuel Albanese"
+            />
           </div>
 
           <div className="flex flex-col gap-6">

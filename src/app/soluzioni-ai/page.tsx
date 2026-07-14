@@ -10,12 +10,8 @@ export const metadata: Metadata = {
     "Pipeline RAG, agenti LLM e inferenza locale progettati per essere deterministici, verificabili e conformi agli standard — non un black-box che spera di avere ragione.",
 };
 
-const pains = [
-  "Il chatbot risponde cose inventate ai vostri clienti, e nessuno se ne accorge finché non è tardi",
-  "I costi delle API AI sono imprevedibili e crescono senza controllo",
-  "I dati sensibili finiscono su servizi di terzi, con problemi GDPR non affrontati",
-  "Nessuno in azienda può spiegare perché il sistema ha dato quella risposta",
-];
+const painsIntro =
+  "Il chatbot risponde cose inventate ai vostri clienti e nessuno se ne accorge finché non è tardi. I costi delle API AI crescono senza controllo, imprevedibili mese dopo mese. I dati sensibili finiscono su servizi di terzi, con i problemi GDPR mai affrontati davvero. E quando qualcosa va storto, in azienda nessuno riesce a spiegare perché il sistema ha dato proprio quella risposta.";
 
 const solutionPoints = [
   {
@@ -93,16 +89,7 @@ export default function SoluzioniAiPage() {
           <h2 className="font-display text-2xl font-semibold sm:text-3xl">
             Il problema
           </h2>
-          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
-            {pains.map((pain) => (
-              <li
-                key={pain}
-                className="rounded-2xl border border-border bg-surface p-5 text-ink-2"
-              >
-                {pain}
-              </li>
-            ))}
-          </ul>
+          <p className="mt-4 max-w-2xl text-lg text-ink-2">{painsIntro}</p>
         </Container>
       </section>
 

@@ -82,19 +82,7 @@ export default async function CaseStudyPage({ params }: Props) {
           <h2 className="font-display text-2xl font-semibold sm:text-3xl">
             Come funziona
           </h2>
-          <ol className="mt-6 grid gap-4 sm:grid-cols-2">
-            {project.howItWorks.map((step, index) => (
-              <li
-                key={step}
-                className="flex gap-4 rounded-2xl border border-border bg-surface p-5"
-              >
-                <span className="font-mono text-sm text-ink-2">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span className="text-ink-2">{step}</span>
-              </li>
-            ))}
-          </ol>
+          <p className="mt-4 max-w-2xl text-ink-2">{project.howItWorks}</p>
         </Container>
       </section>
 
@@ -103,16 +91,7 @@ export default async function CaseStudyPage({ params }: Props) {
           <h2 className="font-display text-2xl font-semibold sm:text-3xl">
             Risultati
           </h2>
-          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
-            {project.results.map((result) => (
-              <li
-                key={result}
-                className="rounded-2xl border border-border bg-surface p-5 text-ink-2"
-              >
-                {result}
-              </li>
-            ))}
-          </ul>
+          <p className="mt-4 max-w-2xl text-ink-2">{project.results}</p>
         </Container>
       </section>
 
