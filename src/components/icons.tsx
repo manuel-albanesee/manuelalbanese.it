@@ -8,6 +8,24 @@ export function GitHubIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function EmailIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m2 6 10 7 10-7" />
+    </svg>
+  );
+}
+
 export function LinkedInIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>

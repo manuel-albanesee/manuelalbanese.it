@@ -152,11 +152,11 @@ export default function SoluzioniAiPage() {
         <Container className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="font-display text-2xl font-semibold sm:text-3xl">
-              Prova: eml_classificator e researcher
+              Prova: ContextFlow e researcher
             </h2>
             <p className="mt-2 max-w-md text-ink-2">
-              Un classificatore email deterministico in produzione e una
-              pipeline di ricerca open source — codice vero, non solo
+              Un orchestratore di contesto deterministico per assistenti AI e
+              una pipeline di ricerca open source — codice vero, non solo
               promesse.
             </p>
           </div>

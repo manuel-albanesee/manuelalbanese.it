@@ -21,14 +21,14 @@ export const projectsPreview: ProjectPreview[] = [
     href: "/progetti/researcher",
   },
   {
-    slug: "eml-classificator",
-    name: "eml_classificator",
+    slug: "contextflow",
+    name: "ContextFlow",
     category: "AI",
     summary:
-      "Classificatore email deterministico per un flusso di smistamento enterprise: stessa email in ingresso, stesso esito in uscita, sempre.",
-    proof: "Logica di classificazione tracciabile e auditabile, non un modello black-box",
-    stack: ["Python"],
-    href: "/progetti/eml-classificator",
+      "Orchestratore di contesto deterministico per assistenti AI: proxy stateless che compone system prompt effimeri da una memoria distillata gerarchicamente (piramide L0→L3).",
+    proof: "CLI, dashboard di audit e packaging npm già costruiti — codice ispezionabile, non un prompt magico",
+    stack: ["TypeScript", "Node"],
+    href: "/progetti/contextflow",
   },
   {
     slug: "menudigitale",

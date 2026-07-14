@@ -37,25 +37,26 @@ export const caseStudies: CaseStudy[] = [
     externalHref: "https://github.com/manuel-albanesee/researcher",
   },
   {
-    slug: "eml-classificator",
-    name: "eml_classificator",
+    slug: "contextflow",
+    name: "ContextFlow",
     category: "AI",
-    year: "2024",
-    headline: "Un flusso di smistamento email deterministico, non un modello che tira a indovinare",
+    year: "2025",
+    headline: "Un orchestratore di contesto deterministico per assistenti AI, non un prompt magico",
     context:
-      "Flusso di smistamento email per un contesto enterprise, dove la stessa email doveva sempre produrre lo stesso esito di classificazione — requisito non negoziabile per un processo integrato in altri sistemi a valle.",
+      "Prodotto in preparazione per il lancio in private beta: un proxy stateless che si inserisce tra IDE (Claude Code, Copilot) e LLM per gestire il contesto in modo riproducibile invece che affidarsi a system prompt statici o a memoria ad hoc.",
     problem:
-      "Un classificatore probabilistico standard può cambiare esito sulla stessa email da un run all'altro, rendendo impossibile fidarsi del risultato in un processo aziendale tracciato.",
+      "Gli assistenti AI perdono coerenza di contesto tra sessioni e moduli: il prompt cresce senza controllo, la memoria non è tracciabile e ogni sessione riparte da zero o si affida a un contesto non verificabile.",
     solution:
-      "Logica di classificazione deterministica e auditabile: ogni decisione è riconducibile a una regola ispezionabile, non a un punteggio di un modello black-box.",
+      "Il proxy compone system prompt effimeri a partire da una memoria distillata gerarchicamente (piramide L0→L3) e da regole di contesto specifiche per modulo — CLI, dashboard di audit e packaging npm già costruiti.",
     results: [
-      "Stessa email in ingresso, stesso esito in uscita, sempre — nessuna deriva tra run",
-      "Ogni classificazione è tracciabile fino alla regola che l'ha determinata",
-      "Il processo di smistamento manuale è stato sostituito da un flusso verificabile",
+      "Contesto iniettato in ogni richiesta LLM è ricostruibile e auditabile, non un prompt opaco",
+      "Memoria distillata su più livelli (L0→L3) invece di un unico blob non strutturato",
+      "CLI, dashboard di audit e packaging npm pronti in vista della private beta",
     ],
-    stack: ["Python"],
+    stack: ["TypeScript", "Node"],
     verification:
-      "Logica di classificazione ispezionabile e testata su casi reali prima della messa in produzione, non solo sull'happy path.",
+      "Panoramica pubblica e architettura discutibili su richiesta: codice del prodotto commerciale privato, ma il design è verificabile a voce o via demo.",
+    externalHref: "https://github.com/manuel-albanesee/contextflow-showcase",
   },
   {
     slug: "menudigitale",
@@ -77,5 +78,6 @@ export const caseStudies: CaseStudy[] = [
     stack: ["Next.js", "Sanity"],
     verification:
       "Ogni rilascio passa dalla suite Vitest + Playwright prima di raggiungere la produzione.",
+    externalHref: "https://github.com/manuel-albanesee/menudigitale-showcase",
   },
 ];
